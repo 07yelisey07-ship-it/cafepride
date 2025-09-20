@@ -229,60 +229,6 @@ document.getElementById('pizzaCard').addEventListener('click', function() {
         document.getElementById('loader').style.display = 'none';
     });
 
-// УНИВЕРСАЛЬНАЯ ФУНКЦИЯ ДЛЯ ВСЕХ ПЕРЕХОДОВ
-function navigateToSection(sectionId) {
-    const targetSection = document.getElementById(sectionId);
-    if (!targetSection) return;
-    
-    // Показываем лоадер
-    document.getElementById('loader').style.display = 'block';
-    
-    // Прокрутка
-    targetSection.scrollIntoView({ 
-        behavior: 'smooth' 
-    });
-    
-    // Скрываем лоадер
-    setTimeout(() => {
-        document.getElementById('loader').style.display = 'none';
-    }, 1000);
-    
-    // ОБНОВЛЯЕМ ИСТОРИЮ БРАУЗЕРА (добавляем запись)
-    history.pushState(null, null, #${sectionId});
-}
-
-// ОБРАБОТКА КЛИКОВ ПО МЕНЮ
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        navigateToSection(targetId);
-    });
-});
-
-// САМОЕ ВАЖНОЕ: обработка кнопок "Назад/Вперед"
-window.addEventListener('popstate', function() {
-    // Получаем текущий хэш из URL (например: "#pizza")
-    const hash = window.location.hash.substring(1);
-    
-    if (hash) {
-        // Если есть якорь - переходим к секции
-        navigateToSection(hash);
-    } else {
-        // Если якоря нет (главная) - просто скрываем лоадер
-        document.getElementById('loader').style.display = 'none';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-});
-
-// Обработка при загрузке страницы (если сразу открыли с якорем)
-window.addEventListener('DOMContentLoaded', function() {
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-        navigateToSection(hash);
-    }
-});
-
 // Маска для телефона
 document.getElementById('phone')?.addEventListener('input', function(e) {
     let phone = this.value.replace(/\D/g, '');
@@ -741,3 +687,4 @@ document.getElementById('orderPhone')?.addEventListener('keydown', function(e) {
     }
 
 });
+
