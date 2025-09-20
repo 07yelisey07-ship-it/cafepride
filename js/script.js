@@ -70,8 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 //---------------------------пицца--------------------------------------------
 document.getElementById('pizzaCard').addEventListener('click', function() {
-        // Показываем лоадер перед переходом
-        document.getElementById('loader').style.display = 'block';
+        
         
         
         setTimeout(function() {
@@ -684,3 +683,4 @@ document.getElementById('orderPhone')?.addEventListener('keydown', function(e) {
     }
 
 });
+
