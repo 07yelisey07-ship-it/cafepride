@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Меню бургеров</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .add-button.added {
+      background-color: white !important;
+      color: black !important;
+      border: 1px solid black !important;
+    }
+
+    button:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="scroll-list__wrp">
+    <h2 class="zagolovok">БУРГЕРЫ НА УГЛЯХ</h2>   
+    
+    <!-- Бургер Hot острый -->
+    <div class="scroll-list__item" data-id="32">
+      <div class="item-content">
+        <img src="images/burger-hot.png" alt="Бургер Hot острый" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР HOT ОСТРЫЙ 320 гр.</h3>
+          <p class="item-ingredients">булка, соус сацибели, салат Айсберг, томат, котлета говядина, лук свежий, зелень, соус тартар, колбаска пепперони</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14.40 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Avo -->
+    <div class="scroll-list__item" data-id="33">
+      <div class="item-content">
+        <img src="images/burger-avo.png" alt="Бургер Avo" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР AVO 320 гр.</h3>
+          <p class="item-ingredients">соус цезарь, салат айсберг, авокадо, огурец свежий, котлета куриная, сыр крем-чиз, соус чесночный, терияки</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">13 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Forest -->
+    <div class="scroll-list__item" data-id="34">
+      <div class="item-content">
+        <img src="images/burger-forest.png" alt="Бургер Forest" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР FOREST 320 гр.</h3>
+          <p class="item-ingredients">булка, соус грибной, салат айсберг, грибы жареные шампиньоны, котлета говядина, лук свежий, огурчик маринованный, сыр моцарелла, соус грибной, соус терияки</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">15.50 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Sam -->
+    <div class="scroll-list__item" data-id="35">
+      <div class="item-content">
+        <img src="images/burger-sam.png" alt="Бургер Sam" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР SAM 320 гр.</h3>
+          <p class="item-ingredients">булка, соус чесночный, салат айсберг, томат, котлета говядина, сыр чеддер, огурчик маринованный, лук свежий, соус кетчуп, соус горчичный</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Din -->
+    <div class="scroll-list__item" data-id="36">
+      <div class="item-content">
+        <img src="images/burger-din.png" alt="Бургер Din" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР DIN 320 гр.</h3>
+          <p class="item-ingredients">булка, соус тартар, салат Айсберг, котлета говядина, сыр чеддер, огурчик маринованный, соус гриль, соус сырный, лук свежий</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">15.50 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Black Panther -->
+    <div class="scroll-list__item" data-id="37">
+      <div class="item-content">
+        <img src="images/burger-black-panther.png" alt="Бургер Black Panther" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР BLACK PANTHER 320 гр.</h3>
+          <p class="item-ingredients">черная булка, соус чесночный, салат Айсберг, томат, огурчик маринованный, котлета говядина, бекон, соус терляки, сыр крем-чиз</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14.90 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Sirius -->
+    <div class="scroll-list__item" data-id="38">
+      <div class="item-content">
+        <img src="images/burger-sirius.png" alt="Бургер Sirius" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР SIRIUS 320 гр.</h3>
+          <p class="item-ingredients">булка, соус барбекю, салат Айсберг, огурец свежий, сыр моцарелла, котлета говядина, соус майонез, соус горчичный, лук панированный</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Pop -->
+    <div class="scroll-list__item" data-id="39">
+      <div class="item-content">
+        <img src="images/burger-pop.png" alt="Бургер Pop" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР POP 320 гр.</h3>
+          <p class="item-ingredients">булка, соус чесночный, томаты, огурец свежий, котлета куриная, зелень, соус кисло-спадкий, сыр сулугуни, лук свежий</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">12 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Pingvi -->
+    <div class="scroll-list__item" data-id="40">
+      <div class="item-content">
+        <img src="images/burger-pingvi.png" alt="Бургер Pingvi" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР PINGVI 320 гр.</h3>
+          <p class="item-ingredients">булка, соус чесночный, салат Айсберг, томат, котлета куриная, сыр чеддер, огурец свежий, соус кунжутный</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">12 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Бургер Bigi -->
+    <div id="indent" class="scroll-list__item" data-id="41">
+      <div class="item-content">
+        <img src="images/burger-bigi.png" alt="Бургер Bigi" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">БУРГЕР BIGI 320 гр.</h3>
+          <p class="item-ingredients">черная булка, соус чесночный, наггетсы, картофель фри, бекон, лук панированный, огурчик маринованный, сыр чеддер, соус кетчуп, майонез</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14.50 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Модальное окно -->
+  <div class="modal-overlay" id="pizzaModal" style="display:none">
+    <div class="modal-content">
+        <img id="modalPizzaImage" src="" alt="">
+        <div class="modal-info">
+            <h2 class="item-name" id="modalPizzaName"></h2>
+            <p class="item-ingredients" id="modalPizzaIngredients"></p>
+            <p class="modal-price" id="modalPizzaPrice"></p>
+            <button class="add-to-cart-btn">Добавить в корзину</button>
+        </div>
+        <button class="close-modal"></button>
+    </div>
+  </div>
+  
+  <!-- Фиксированная иконка корзины внизу -->
+  <div class="fixed-cart-icon" id="cartIcon">
+      <img src="images/cart-icon.svg" alt="Корзина">
+      <span class="cart-count">0</span>
+  </div>
+
+  <!-- Боковая панель корзины -->
+  <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+          <h3 class="page_title">Корзина</h3>
+          <button class="close-cart"></button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+          <div class="cart-total">
+              <span>Итого:</span>
+              <span id="cartTotal">0 руб.</span>
+          </div>
+          <button class="order-btn">Оформить заказ</button>
+      </div>
+  </div>
+  <!-- Модальное окно оформления заказа -->
+<div class="order-modal-overlay" id="orderModal" style="display:none">
+    <div class="order-modal-content">
+        <div class="order-modal-header">
+                <h3>Оформление заказа</h3>
+            <button class="close-order-modal"></button>
+            </div>
+        <div class="order-modal-body">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="orderName">Ваше имя</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">Телефон</label>
+                   <input type="tel" id="phone" name="phone" value="+375 " required="" maxlength="19">
+                </div>
+                <div class="form-group">
+                    <label>Способ получения</label>
+                    <div class="delivery-options">
+                        <label>
+                            <input type="radio" name="deliveryType" value="delivery" checked>
+                            <span>Доставка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryType" value="pickup">
+                            <span>Самовывоз</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="delivery-address">
+                    <div class="form-group">
+                        <label for="orderStreet">Улица</label>
+                        <input type="text" id="orderStreet" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderHouse">Дом (корпус)</label>
+                            <input type="text" id="orderHouse" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderEntrance">Подъезд</label>
+                            <input type="text" id="orderEntrance">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderFloor">Этаж</label>
+                            <input type="text" id="orderFloor">
+                        </div>
+                        <div class="form-group">
+                            <label for="orderApartment">Квартира</label>
+                            <input type="text" id="orderApartment">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="orderComment">Комментарий к заказу</label>
+                    <textarea id="orderComment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="yellow-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+</div>
+  <!-- Фиксированная иконка возврата на главную -->
+<div class="fixed-home-icon" id="homeIcon">
+    <img src="images/home-icon.svg" alt="На главную" style="filter: brightness(0) invert(1);">
+</div>
+  <script src="js/scriptes.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/pizza-script.js"></script>
+</body>
+</html>

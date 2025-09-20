@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Меню ресторана</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .add-button.added {
+      background-color: white !important;  /* Белый фон */
+      color: black !important;           /* Черный текст */
+      border: 1px solid black !important; /* Черная рамка 1px */
+    }
+
+    button:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="scroll-list__wrp">
+    <h2 class="zagolovok">САЛАТЫ</h2>   
+    
+    <!-- Салат Прайд -->
+    <div class="scroll-list__item" data-id="12">
+      <div class="item-content">
+        <img src="images/салат-прайд.png" alt="Салат Прайд" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">САЛАТ ПРАЙД 350 гр.</h3>
+          <p class="item-ingredients">говадина, картофельные дольки, грибы опята, томаты черри, яйцо пашот, стручковая фасоль, салат айсберг, соус фирменный</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">24 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Салат Тунец с картофелем -->
+    <div class="scroll-list__item" data-id="13">
+      <div class="item-content">
+        <img src="images/салат-тунец-картофель.png" alt="Салат Тунец с картофелем" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">САЛАТ ТУНЕЦ С КАРТОФЕЛЕМ 300 гр.</h3>
+          <p class="item-ingredients">дольки картофельные, салат айсберг, томаты, тунец консервированный, огурец маринованный, яйцо пашот, лук маринованный, морковь корейская, заправка фирменная</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">18 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Салат с хрустящими баклажанами -->
+    <div class="scroll-list__item" data-id="14">
+      <div class="item-content">
+        <img src="images/салат-баклажаны.png" alt="Салат с хрустящими баклажанами" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">САЛАТ С ХРУСТЯЩИМИ БАКЛАЖАНАМИ 250 гр.</h3>
+          <p class="item-ingredients">баклажаны, томаты, сыр крем-чиз., специи из итальянских трав, салат айсберг, редис дайкон, соус сладкий чили, семена подсолнуха, кунжут, перец болгарский, заправка фирменная</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">18 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Греческий салат -->
+    <div class="scroll-list__item" data-id="15">
+      <div class="item-content">
+        <img src="images/греческий-салат.png" alt="Греческий салат" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">САЛАТ ГРЕЧЕСКИЙ 250 гр.</h3>
+          <p class="item-ingredients">томаты черри, маслины, салат айсберг, перец болгарский, сыр крем-чиз, огурец свежий, заправка фирменная</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">15 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Цезарь с курицей -->
+    <div class="scroll-list__item" data-id="16">
+      <div class="item-content">
+        <img src="images/цезарь-курица.png" alt="Цезарь с курицей" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">САЛАТ ЦЕЗАРЬ С КУРИЦЕЙ 250 гр.</h3>
+          <p class="item-ingredients">салат айсберг, яйцо перепелиное, куриное филе, томаты черри, сыр пармезан, сухари багетные, заправка «цезарь»</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">15 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Цезарь с форелью -->
+    <div class="scroll-list__item" data-id="17">
+      <div class="item-content">
+        <img src="images/цезарь-форель.png" alt="Цезарь с форелью" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">САЛАТ ЦЕЗАРЬ С ФОРЕЛЬЮ 250 гр.</h3>
+          <p class="item-ingredients">салат айсберг, томаты черри, форель, пармезан, сухари багетные, заправка «цезарь»</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">20 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Цезарь с тунцом -->
+    <div class="scroll-list__item" data-id="18">
+      <div class="item-content">
+        <img src="images/цезарь-тунец.png" alt="Цезарь с тунцом" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">САЛАТ ЦЕЗАРЬ С ТУНЦОМ 250 гр.</h3>
+          <p class="item-ingredients">салат айсберг, перепелиные яйца, томаты черри, пармезан, багетные сухари, тунец консервированный, заправка «цезарь»</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">15 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+   <h2 class="zagolovok">ПОКЕ</h2>
+    
+    <!-- Мориати -->
+    <div class="scroll-list__item" data-id="19">
+      <div class="item-content">
+        <img src="images/поке-мориати.png" alt="Поке Мориати" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">МОРИАТИ 320 ГР.</h3>
+          <p class="item-ingredients">рис, огурец, болгарский перец, редька дайкон, чука, лимон, тобико, соус кунжутный, норм</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">17 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- С креветками -->
+    <div class="scroll-list__item" data-id="20">
+      <div class="item-content">
+        <img src="images/поке-креветки.png" alt="Поке с креветками" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">С КРЕВЕТКАМИ 320 ГР.</h3>
+          <p class="item-ingredients">рис, креветки, редька дайкон, чука, лимон, мэра тобико, болгарский перец, авокадо, соус спайки, стружка тунца, норм</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">20 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- С тунцом -->
+    <div class="scroll-list__item" data-id="21">
+      <div class="item-content">
+        <img src="images/поке-тунец.png" alt="Поке с тунцом" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">С ТУНЦОМ 320 ГР.</h3>
+          <p class="item-ingredients">рис, мэра тобико, тунец, стружка тунца, соус терияки, редька дайкон, лимон, авокадо, чука, болгарский перец, норм</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">17 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- С угрем -->
+    <div class="scroll-list__item" data-id="22">
+      <div class="item-content">
+        <img src="images/поке-угорь.png" alt="Поке с угрем" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">С УГРЁМ 320 ГР.</h3>
+          <p class="item-ingredients">рис, мэра тобико, огурец, чука, перец болгарский, соус унаги, стружка тунца, норм, крем чиз, угорь, редька дайкон, лимон, кунжут</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">19 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    <!-- Соевый соус -->
+    <div class="scroll-list__item" data-id="23">
+      <div class="item-content">
+        <img src="images/cоевый.png" alt="Соевый" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">СОЕВЫЙ СОУС 30 ГР.</h3>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">2 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    <!-- Соус кунжутный -->
+    <div class="scroll-list__item" data-id="24">
+      <div class="item-content">
+        <img src="images/кунжутный.png" alt="соус кунжутный" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">СОУС КУНЖУТНЫЙ 30 ГР.</h3>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">3 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+<!-- Соус васаби -->
+    <div class="scroll-list__item" data-id="25">
+      <div class="item-content">
+        <img src="images/васаби.png" alt="васаби" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">СОУС ВАСАБИ 20 ГР.</h3>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">2 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    <!-- Имбирь -->
+    <div id="indent" class="scroll-list__item" data-id="26">
+      <div class="item-content">
+        <img src="images/имбмрь.png" alt="Поке с угрем" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ИМБИРЬ 30 ГР.</h3>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">2 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="pizzaModal" style="display:none">
+    <div class="modal-content">
+        <img id="modalPizzaImage" src="" alt="">
+        <div class="modal-info">
+            <h2 class="item-name" id="modalPizzaName"></h2>
+            <p class="item-ingredients" id="modalPizzaIngredients"></p>
+            <p class="modal-price" id="modalPizzaPrice"></p>
+            <button class="add-to-cart-btn">Добавить в корзину</button>
+        </div>
+        <button class="close-modal"></button>
+    </div>
+  </div>
+  
+  <!-- Фиксированная иконка корзины внизу -->
+  <div class="fixed-cart-icon" id="cartIcon">
+      <img src="images/cart-icon.svg" alt="Корзина">
+      <span class="cart-count">0</span>
+  </div>
+
+  <!-- Боковая панель корзины -->
+  <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+          <h3 class="page_title">Корзина</h3>
+          <button class="close-cart"></button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+          <div class="cart-total">
+              <span>Итого:</span>
+              <span id="cartTotal">0 руб.</span>
+          </div>
+          <button class="order-btn">Оформить заказ</button>
+      </div>
+  </div>
+  <!-- Модальное окно оформления заказа -->
+<div class="order-modal-overlay" id="orderModal" style="display:none">
+    <div class="order-modal-content">
+        <div class="order-modal-header">
+                <h3>Оформление заказа</h3>
+            <button class="close-order-modal"></button>
+            </div>
+        <div class="order-modal-body">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="orderName">Ваше имя</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">Телефон</label>
+                   <input type="tel" id="phone" name="phone" value="+375 " required="" maxlength="19">
+                </div>
+                <div class="form-group">
+                    <label>Способ получения</label>
+                    <div class="delivery-options">
+                        <label>
+                            <input type="radio" name="deliveryType" value="delivery" checked>
+                            <span>Доставка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryType" value="pickup">
+                            <span>Самовывоз</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="delivery-address">
+                    <div class="form-group">
+                        <label for="orderStreet">Улица</label>
+                        <input type="text" id="orderStreet" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderHouse">Дом (корпус)</label>
+                            <input type="text" id="orderHouse" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderEntrance">Подъезд</label>
+                            <input type="text" id="orderEntrance">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderFloor">Этаж</label>
+                            <input type="text" id="orderFloor">
+                        </div>
+                        <div class="form-group">
+                            <label for="orderApartment">Квартира</label>
+                            <input type="text" id="orderApartment">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="orderComment">Комментарий к заказу</label>
+                    <textarea id="orderComment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="yellow-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+</div>
+  <!-- Фиксированная иконка возврата на главную -->
+<div class="fixed-home-icon" id="homeIcon">
+    <img src="images/home-icon.svg" alt="На главную" style="filter: brightness(0) invert(1);">
+</div>
+  <script src="js/scriptes.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/pizza-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#212428">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Лоадер (показывается при загрузке) -->
+    <div class="loader" id="loader"></div>
+    <!-- Фоновое изображение -->
+    <div class="background-image"></div>
+    
+    <!-- Фиксированная шапка (ТОЛЬКО логотип и картинка) -->
+    <header class="main-header">
+    <div class = "header-content">
+        <div class = "logo-section">
+            <img src = "images/logo.png" alt =
+            "Логотип The Pride" class = "logo">
+            <div class = "title">
+                <span>Кафе</span>
+                <span>ПрайД</span>
+            </div>
+        </div>
+        <button class="burger-menu" aria-expanded="false" aria-label="Открыть меню" aria-controls="page-nav">
+            <span class="burger-line top-line"></span>
+            <span class="burger-line middle-line"></span>
+            <span class="burger-line bottom-line"></span>
+        </button>
+    </div>
+    <nav class = "page-nav">
+        <a href= "#home">ГЛАВНАЯ</a>
+        <a href= "#menu">МЕНЮ</a>
+        <a href="#form" class="book-table">ЗАБРОНИРОВАТЬ СТОЛИК</a>
+        <a href= "#gallery">ГАЛЕРЕЯ</a>
+        <a href= "#contacts">КОНТАКТЫ</a>
+    </nav>
+    <div class="nav-overlay"></div>
+</header>
+<!-- Основное содержимое -->
+    <main>
+        <!-- Секция "Главная" -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Кафе Прайд</h1>
+                <p>Натуральные ингредиенты, вкусные рецепты и высокий уровень сервиса</p>
+                <a href="#menu" class="yellow-btn">перейти к меню</a>
+            </div>
+        </section>
+
+        <!-- Пустые секции для якорей -->
+        <section id="menu">
+            <h2 class="section-title">Наше меню</h2>
+        <div class="menu-items">
+            <div class="menu-item" id="pizzaCard">
+                <img src="images/Pizza-scaled.jpg" alt="ПИЦЦА">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>ПИЦЦА</span>
+                        <span class="menu-item-price">от 18 руб.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-item" id="saladCard">
+                <img src="images/salads.jpg" alt="САЛАТЫ">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>САЛАТЫ</span>
+                        <span class="menu-item-price">от 15 руб.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-item" id="hotdishesCard">
+                <img src="images/photo.jpg" alt="ГОРЯЧИЕ БЛЮДА">
+                    <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>ГОРЯЧИЕ БЛЮДА </span>
+                        <span class="menu-item-price">от 15 руб.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-item" id="burgerCard">
+                <img src="images/Burger.jpg" alt="БУРГЕРЫ">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>БУРГЕРЫ НА УГЛЯХ</span>
+                        <span class="menu-item-price">от 12 руб.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-item" id="napitokCard">
+                <img src="images/napitok.jpg" alt="НАПИТКИ">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>НАПИТКИ</span>
+                        <span class="menu-item-price">от 2 руб.</span>
+                    </div>
+                </div>
+            </div>
+
+        <div class="menu-item" id="haccapuriCard">
+                <img src="images/huccapuri.jpg" alt="ХАЧАПУРИ">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>ХАЧАПУРИ</span>
+                        <span class="menu-item-price">от 17 руб.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item" id="shawarmaCard">
+                <img src="images/Shaurma.jpg" alt="ШАУРМА">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>ШАУРМА</span>
+                        <span class="menu-item-price">от 10 руб.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" id="grillCard">
+                <img src="images/barbecue.jpg" alt="МАНГАЛ МЕНЮ">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>МАНГАЛ МЕНЮ</span>
+                        <span class="menu-item-price">от 9 руб.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" id="snackCard">
+                <img src="images/snack.jpg" alt="ЗАКУСКА">
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <span>ЗАКУСКА</span>
+                        <span class="menu-item-price">от 5 руб.</span>
+                    </div>
+                </div>
+            </div>
+            </section>
+            
+       <section id="form">
+    <h2 class="section-title">Забронировать столик</h2>
+    <div class="booking-form-container">
+        <form class="booking-form">
+            <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input title="Имя на которое оформляете бронь" placeholder="Имя" type="text" id="name" name="name" required>
+            </div>
+            
+    <div class="form-group">
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" value="+375 " required maxlength="19" >
+     </div>
+            
+            <div class="form-group">
+                <label for="date">Дата и время</label>
+                <input type="datetime-local" id="date" name="date" value="2025-07-08T22:45" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="guests">Количество гостей</label>
+                <select id="guests" name="guests" required>
+                    <option value="1">1 человек</option>
+                    <option value="2">2 человека</option>
+                    <option value="3">3 человека</option>
+                    <option value="4">4 человека</option>
+                    <option value="5">5 человек</option>
+                    <option value="6">6 человек</option>
+                    <option value="7">7 человек</option>
+                    <option value="8">8 человек</option>
+                    <option value="more">Более 8 человек</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="notes">Пожелания</label>
+                <textarea placeholder="Введите ваши пожелания" id="notes" name="notes" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="yellow-btn">Забронировать</button>
+        </form>
+    </div>
+</section>
+       <section id="gallery">
+    <h2 class="section-title">Галерея</h2>
+    <div class="gallery-container">
+        <div class="gallery-slider">
+            <!-- Изображения будут добавлены через JavaScript -->
+        </div>
+        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
+        <div class="gallery-dots"></div>
+    </div>
+</section>
+        <section id="contacts">
+    <h2 class="section-title">Контакты</h2>
+    <div class="contacts-container">
+            <div class="working-hours-timer1">
+                <div class="timer-title">Как нас найти</div>
+                <div class="contact-item" id="geolocation">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>ул. Макара Барташова 17, Жлобин, Гомельская облость</span>
+                </div>
+                <div class="contact-item" id="phoneContact">
+                    <i class="fas fa-phone"></i>
+                    <span>+375 (25) 70-70-999</span>
+                </div>
+                <div class="contact-item" id="instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>@cafepride1</span>
+                </div>
+                <div class="contact-item" id="#">
+                    <i class="fas fa-hashtag"></i>
+                    <span>#кафепарйд</span>
+                </div>
+            </div>        
+        <div class="working-hours-timer1">
+            <div class="timer-title" id="timerStatus">Закрываемся через:</div>
+            <div class="timer-display" id="timerDisplay">--часов:--минут</div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Вс-Чт: 11:00 - 23:00</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Пт-Сб: 11:00 - 00:00</span>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3 class="page_title">Корзина</h3>
+        <button class="close-cart"></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Итого:</span>
+            <span id="cartTotal">0 руб.</span>
+        </div>
+        <button class="order-btn">Оформить заказ</button>
+    </div>
+</div>
+<!-- Модальное окно оформления заказа -->
+<div class="order-modal-overlay" id="orderModal" style="display:none">
+    <div class="order-modal-content">
+        <div class="order-modal-header">
+                <h3>Оформление заказа</h3>
+            <button class="close-order-modal"></button>
+            </div>
+        <div class="order-modal-body">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="orderName">Ваше имя</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">Телефон</label>
+                   <input type="tel" id="phone" name="phone" value="+375 " required="" maxlength="19">
+                </div>
+                <div class="form-group">
+                    <label>Способ получения</label>
+                    <div class="delivery-options">
+                        <label>
+                            <input type="radio" name="deliveryType" value="delivery" checked>
+                            <span>Доставка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryType" value="pickup">
+                            <span>Самовывоз</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="delivery-address">
+                    <div class="form-group">
+                        <label for="orderStreet">Улица</label>
+                        <input type="text" id="orderStreet" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderHouse">Дом (корпус)</label>
+                            <input type="text" id="orderHouse" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderEntrance">Подъезд</label>
+                            <input type="text" id="orderEntrance">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderFloor">Этаж</label>
+                            <input type="text" id="orderFloor">
+                        </div>
+                        <div class="form-group">
+                            <label for="orderApartment">Квартира</label>
+                            <input type="text" id="orderApartment">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="orderComment">Комментарий к заказу</label>
+                    <textarea id="orderComment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="yellow-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Фиксированная иконка корзины внизу -->
+<div class="fixed-cart-icon" id="cartIcon">
+    <img src="images/cart-icon.svg" alt="Корзина">
+    <span class="cart-count">0</span>
+</div>
+<footer>
+        <p>© 2025 Кафе Прайд. Все права защищены.</p>
+        <p>Сайт разработан специально для нашего уютного кафе</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

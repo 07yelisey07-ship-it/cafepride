@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Мангал меню</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .add-button.added {
+      background-color: white !important;
+      color: black !important;
+      border: 1px solid black !important;
+    }
+
+    button:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="scroll-list__wrp">
+    <h2 class="zagolovok">МАНГАЛ МЕНЮ</h2>
+
+    <!-- Люля-кебаб из птицы -->
+    <div class="scroll-list__item" data-id="68">
+      <div class="item-content">
+        <img src="images/lyulya-chicken.jpg" alt="Люля-кебаб из птицы" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ЛЮЛЯ КЕБАБ ИЗ ПТИЦЫ 500 ГР.</h3>
+          <p class="item-ingredients">лаваш, фарш из куриного филе, лук репчатый, зелень, специи, картофельные дольки, соус</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">12.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Люля-кебаб из свинины -->
+    <div class="scroll-list__item" data-id="69">
+      <div class="item-content">
+        <img src="images/lyulya-pork.jpg" alt="Люля-кебаб из свинины" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ЛЮЛЯ КЕБАБ ИЗ СВИНИНЫ 500 ГР.</h3>
+          <p class="item-ingredients">лаваш, фарш из свинины, лук репчатый, зелень, специи, картофельные дольки, соус</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">13.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Люля-кебаб из говядины -->
+    <div class="scroll-list__item" data-id="70">
+      <div class="item-content">
+        <img src="images/lyulya-beef.jpg" alt="Люля-кебаб из говядины" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ЛЮЛЯ КЕБАБ ИЗ ГОВЯДИНЫ 500 ГР.</h3>
+          <p class="item-ingredients">лаваш, фарш из говядины, лук репчатый, зелень, специи, картофельные дольки, соус</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Шашлык из свиной шеи -->
+    <div class="scroll-list__item" data-id="71">
+      <div class="item-content">
+        <img src="images/pork-neck.jpg" alt="Шашлык из свиной шеи" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ШАШЛЫК ИЗ СВИНОЙ ШЕИ С ГАРНИРОМ 550 ГР.</h3>
+          <p class="item-ingredients">лаваш, сочная свинина, лук свежий, зелень, картофель фри, соус</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">16.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Шашлык из курицы -->
+    <div class="scroll-list__item" data-id="72">
+      <div class="item-content">
+        <img src="images/chicken-shashlik.jpg" alt="Шашлык из курицы" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ШАШЛЫК ИЗ КУРИЦЫ С ГАРНИРОМ 550 ГР.</h3>
+          <p class="item-ingredients">лаваш, маринованное куриное мясо, лук свежий, зелень, картофель фри, соус</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Креветки Тайгер -->
+    <div class="scroll-list__item" data-id="73">
+      <div class="item-content">
+        <img src="images/tiger-shrimp.jpg" alt="Креветки Тайгер" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">КРЕВЕТКИ ТАЙГЕР 200 ГР.</h3>
+          <p class="item-ingredients">креветки тигровые, соус томатный с лаймом, лимон, лаваш</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">22.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Стейк Форели -->
+    <div class="scroll-list__item" data-id="74">
+      <div class="item-content">
+        <img src="images/trout-steak.jpg" alt="Стейк Форели" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">СТЕЙК ФОРЕЛИ НА УГЛЯХ С ГАРНИРОМ 400 ГР.</h3>
+          <p class="item-ingredients">стейк из форели, соус тартар, лимон, салат айсберг, спаржа фасоль, лаваш</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">24.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Стейк из Тунца -->
+    <div class="scroll-list__item" data-id="75">
+      <div class="item-content">
+        <img src="images/tuna-steak.jpg" alt="Стейк из Тунца" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">СТЕЙК МЕДАЛЬОН ИЗ ТУНЦА НА УГЛЯХ С ГАРНИРОМ 350 ГР.</h3>
+          <p class="item-ingredients">тунец в маринаде, соус чесночный с французской горчицей, томаты, огурец свежий, зеленый лук, лимон, лаваш</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">26.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Свиной антрекот -->
+    <div class="scroll-list__item" data-id="76">
+      <div class="item-content">
+        <img src="images/pork-entrecote.jpg" alt="Свиной антрекот" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">СТЕЙК СВИНОЙ АНТРЕКОТ С ГАРНИРОМ 630 ГР.</h3>
+          <p class="item-ingredients">антрекот свиной, соус сацебели, картофель фри, зеленый лук, огурец свежий, томаты, лаваш</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">20.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Стейк из мраморной говядины -->
+    <div class="scroll-list__item" data-id="77">
+      <div class="item-content">
+        <img src="images/beef-steak.jpg" alt="Стейк из мраморной говядины" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">СТЕЙК ИЗ МРАМОРНОЙ ГОВЯДИНЫ 500 ГР.</h3>
+          <p class="item-ingredients">стейк, уровень прожарки (ред/медиум/вел/блу), спаржа, лайм, соус паршараб, зеленый лук, айсберг, томат, огурец свежий, шампиньон жареный, лаваш</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">28.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Овощи гриль -->
+    <div class="scroll-list__item" data-id="78">
+      <div class="item-content">
+        <img src="images/grilled-vegetables.jpg" alt="Овощи гриль" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ОВОЩИ ГРИЛЬ 400 ГР.</h3>
+          <p class="item-ingredients">баклажан, цукини, помидор, перец болгарский, грибы шампиньоны, зеленый лук, картофельные дольки, соус тартар, фасоль, лаваш</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">14.00 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    <h2 class="zagolovok">ПО ШАМПУРУ</h2>
+    <!-- Шашлык из свиной шеи -->
+<div class="scroll-list__item" data-id="79">
+  <div class="item-content">
+    <img src="images/pork-neck-shashlik.jpg" alt="Шашлык из свиной шеи" class="item-image">
+    <div class="item-text">
+      <h3 class="item-name">ШАШЛЫК ИЗ СВИНОЙ ШЕИ 200 ГР.</h3>
+      <p class="item-ingredients">сочная свиная шея, маринованная с луком и специями</p>
+    </div>
+    <div class="item-price-block">
+      <span class="item-price">12.00 руб.</span>
+      <button class="add-button">Добавить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Шашлык куриный -->
+<div class="scroll-list__item" data-id="80">
+  <div class="item-content">
+    <img src="images/chicken-shashlik.jpg" alt="Шашлык куриный" class="item-image">
+    <div class="item-text">
+      <h3 class="item-name">ШАШЛЫК КУРИНЫЙ 200 ГР.</h3>
+      <p class="item-ingredients">куриное филе, маринованное с луком и специями</p>
+    </div>
+    <div class="item-price-block">
+      <span class="item-price">9.00 руб.</span>
+      <button class="add-button">Добавить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Стейк из форели -->
+<div class="scroll-list__item" data-id="81">
+  <div class="item-content">
+    <img src="images/trout-steak.jpg" alt="Стейк из форели" class="item-image">
+    <div class="item-text">
+      <h3 class="item-name">СТЕЙК ИЗ ФОРЕЛИ 200 ГР.</h3>
+      <p class="item-ingredients">свежая форель, приготовленная на углях</p>
+    </div>
+    <div class="item-price-block">
+      <span class="item-price">14.00 руб.</span>
+      <button class="add-button">Добавить</button>
+    </div>
+  </div>
+</div>
+
+<!-- Стейк антрекот свиной -->
+<div id="indent" class="scroll-list__item" data-id="82">
+  <div class="item-content">
+    <img src="images/pork-entrecote.jpg" alt="Стейк антрекот свиной" class="item-image">
+    <div class="item-text">
+      <h3 class="item-name">СТЕЙК АНТРЕКОТ СВИНОЙ 200 ГР.</h3>
+      <p class="item-ingredients">сочный свиной антрекот, приготовленный на углях</p>
+    </div>
+    <div class="item-price-block">
+      <span class="item-price">14.00 руб.</span>
+      <button class="add-button">Добавить</button>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="modal-overlay" id="pizzaModal" style="display:none">
+    <div class="modal-content">
+        <img id="modalPizzaImage" src="" alt="">
+        <div class="modal-info">
+            <h2 class="item-name" id="modalPizzaName"></h2>
+            <p class="item-ingredients" id="modalPizzaIngredients"></p>
+            <p class="modal-price" id="modalPizzaPrice"></p>
+            <button class="add-to-cart-btn">Добавить в корзину</button>
+        </div>
+        <button class="close-modal"></button>
+    </div>
+  </div>
+  
+  <!-- Фиксированная иконка корзины внизу -->
+  <div class="fixed-cart-icon" id="cartIcon">
+      <img src="images/cart-icon.svg" alt="Корзина">
+      <span class="cart-count">0</span>
+  </div>
+
+  <!-- Боковая панель корзины -->
+  <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+          <h3 class="page_title">Корзина</h3>
+          <button class="close-cart"></button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+          <div class="cart-total">
+              <span>Итого:</span>
+              <span id="cartTotal">0 руб.</span>
+          </div>
+          <button class="order-btn">Оформить заказ</button>
+      </div>
+  </div>
+  <!-- Модальное окно оформления заказа -->
+<div class="order-modal-overlay" id="orderModal" style="display:none">
+    <div class="order-modal-content">
+        <div class="order-modal-header">
+                <h3>Оформление заказа</h3>
+            <button class="close-order-modal"></button>
+            </div>
+        <div class="order-modal-body">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="orderName">Ваше имя</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">Телефон</label>
+                   <input type="tel" id="phone" name="phone" value="+375 " required="" maxlength="19">
+                </div>
+                <div class="form-group">
+                    <label>Способ получения</label>
+                    <div class="delivery-options">
+                        <label>
+                            <input type="radio" name="deliveryType" value="delivery" checked>
+                            <span>Доставка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryType" value="pickup">
+                            <span>Самовывоз</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="delivery-address">
+                    <div class="form-group">
+                        <label for="orderStreet">Улица</label>
+                        <input type="text" id="orderStreet" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderHouse">Дом (корпус)</label>
+                            <input type="text" id="orderHouse" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderEntrance">Подъезд</label>
+                            <input type="text" id="orderEntrance">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderFloor">Этаж</label>
+                            <input type="text" id="orderFloor">
+                        </div>
+                        <div class="form-group">
+                            <label for="orderApartment">Квартира</label>
+                            <input type="text" id="orderApartment">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="orderComment">Комментарий к заказу</label>
+                    <textarea id="orderComment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="yellow-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+</div>
+  <!-- Фиксированная иконка возврата на главную -->
+<div class="fixed-home-icon" id="homeIcon">
+    <img src="images/home-icon.svg" alt="На главную" style="filter: brightness(0) invert(1);">
+</div>
+  <script src="js/scriptes.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/pizza-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Меню ресторана</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .add-button.added {
+      background-color: white !important;  /* Белый фон */
+      color: black !important;           /* Черный текст */
+      border: 1px solid black !important; /* Черная рамка 1px*/
+    }
+
+    button:focus:not(:active)::after {
+      animation: ripple 1s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="scroll-list__wrp">
+    <h2 class="zagolovok">ГОРЯЧИЕ БЛЮДА</h2>   
+    
+    <!-- Аджахури -->
+    <div class="scroll-list__item" data-id="27">
+      <div class="item-content">
+        <img src="images/аджахури.png" alt="Аджахури" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">АДЖАХУРИ 350 гр.</h3>
+          <p class="item-ingredients">свиная шейка, лук, чеснок, дольки картофельные, томатная паста, болгарский перец, зелень</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">23 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Драники с мочанкой -->
+    <div class="scroll-list__item" data-id="28">
+      <div class="item-content">
+        <img src="images/драники-мочанка.png" alt="Драники с мочанкой" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ДРАНИКИ С МОЧАНКОЙ 350 гр.</h3>
+          <p class="item-ingredients">драники, свинина, грибы шампиньоны, сливки, лук репчатый, зелень</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">18 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    <h2 class="zagolovok">ПАСТА</h2>    
+    <!-- Паста карбонара -->
+    <div class="scroll-list__item" data-id="29">
+      <div class="item-content">
+        <img src="images/паста-карбонара.png" alt="Паста карбонара" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ПАСТА КАРБОНАРА 300 гр.</h3>
+          <p class="item-ingredients">спагетти, сыр пармезан, грудинка копченая, яйцо желток, перец черный свежемолотый</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">21 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Паста болоньезе -->
+    <div class="scroll-list__item" data-id="30">
+      <div class="item-content">
+        <img src="images/паста-болоньезе.png" alt="Паста болоньезе" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ПАСТА БОЛОНЬЕЗЕ 300 гр.</h3>
+          <p class="item-ingredients">спагетти, фарш говядина, свинина, томаты, соус томатный, чеснок, морковь, вино бел.сух, зелень</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">15 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Паста дель маре -->
+    <div id="indent" class="scroll-list__item" data-id="31">
+      <div class="item-content">
+        <img src="images/паста-дель-маре.png" alt="Паста дель маре" class="item-image">
+        <div class="item-text">
+          <h3 class="item-name">ПАСТА ДЕЛЬ МАРЕ 270 гр.</h3>
+          <p class="item-ingredients">тельателе, креветки, мидии, кальмары, чеснок, сливки, пармезан</p>
+        </div>
+        <div class="item-price-block">
+          <span class="item-price">20 руб.</span>
+          <button class="add-button">Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="modal-overlay" id="pizzaModal" style="display:none">
+    <div class="modal-content">
+        <img id="modalPizzaImage" src="" alt="">
+        <div class="modal-info">
+            <h2 class="item-name" id="modalPizzaName"></h2>
+            <p class="item-ingredients" id="modalPizzaIngredients"></p>
+            <p class="modal-price" id="modalPizzaPrice"></p>
+            <button class="add-to-cart-btn">Добавить в корзину</button>
+        </div>
+        <button class="close-modal"></button>
+    </div>
+  </div>
+  
+  <!-- Фиксированная иконка корзины внизу -->
+  <div class="fixed-cart-icon" id="cartIcon">
+      <img src="images/cart-icon.svg" alt="Корзина">
+      <span class="cart-count">0</span>
+  </div>
+
+  <!-- Боковая панель корзины -->
+  <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+          <h3 class="page_title">Корзина</h3>
+          <button class="close-cart"></button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+          <div class="cart-total">
+              <span>Итого:</span>
+              <span id="cartTotal">0 руб.</span>
+          </div>
+          <button class="order-btn">Оформить заказ</button>
+      </div>
+  </div>
+  <!-- Модальное окно оформления заказа -->
+<div class="order-modal-overlay" id="orderModal" style="display:none">
+    <div class="order-modal-content">
+        <div class="order-modal-header">
+                <h3>Оформление заказа</h3>
+            <button class="close-order-modal"></button>
+            </div>
+        <div class="order-modal-body">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="orderName">Ваше имя</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">Телефон</label>
+                   <input type="tel" id="phone" name="phone" value="+375 " required="" maxlength="19">
+                </div>
+                <div class="form-group">
+                    <label>Способ получения</label>
+                    <div class="delivery-options">
+                        <label>
+                            <input type="radio" name="deliveryType" value="delivery" checked>
+                            <span>Доставка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryType" value="pickup">
+                            <span>Самовывоз</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="delivery-address">
+                    <div class="form-group">
+                        <label for="orderStreet">Улица</label>
+                        <input type="text" id="orderStreet" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderHouse">Дом (корпус)</label>
+                            <input type="text" id="orderHouse" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderEntrance">Подъезд</label>
+                            <input type="text" id="orderEntrance">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="orderFloor">Этаж</label>
+                            <input type="text" id="orderFloor">
+                        </div>
+                        <div class="form-group">
+                            <label for="orderApartment">Квартира</label>
+                            <input type="text" id="orderApartment">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="orderComment">Комментарий к заказу</label>
+                    <textarea id="orderComment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="yellow-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+</div>
+  <!-- Фиксированная иконка возврата на главную -->
+<div class="fixed-home-icon" id="homeIcon">
+    <img src="images/home-icon.svg" alt="На главную" style="filter: brightness(0) invert(1);">
+</div>
+  <script src="js/scriptes.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/pizza-script.js"></script>
+</body>
+</html>
