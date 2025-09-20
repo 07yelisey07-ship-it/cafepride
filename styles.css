@@ -1,0 +1,447 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+/* Фоновое изображение */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+/* Контейнер списка */
+.scroll-list__wrp {
+  width: 700px;
+  height: auto;
+  overflow: auto;
+  padding: 20px;
+  box-shadow: 0px 7px 46px 0px rgba(0, 0, 0, 0.3);
+  background: #212429;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.zagolovok{
+  text-align:center;
+  margin: 0 0 5px 0;
+  color: #ffd700;
+}
+/* Элемент списка */
+.scroll-list__item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scroll-list__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Изображение элемента */
+.item-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Изображение элемента */
+.item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-text {
+  flex-grow: 1;
+  width: 430px;
+}
+
+/* Название элемента */
+.item-name {
+  font-weight: bold;
+  color: #212429;
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+}
+
+.item-ingredients {
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 0.9em;
+  width: 90%;
+}
+
+/* Блок с ценой и кнопкой */
+.item-price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 105px;
+  gap: 5px;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #212429;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.add-button {
+  background-color: #FFD700;
+  color: #212429;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 33px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.add-button:hover {
+    background-color: #FFC000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Стили модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-modal  {
+    background-color: #ffc605;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    height: 36px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 36px;
+    z-index: 10;
+}
+
+.close-modal:after {
+    left: 17px;
+    top: 9px;
+    transform: rotate(-45deg);
+}
+.close-modal:before {
+    left: 17px;
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.close-modal:after, .close-modal:before{
+    background-color: #212429;
+    content: "";
+    display: block;
+    height: 20px;
+    position: absolute;
+    transition: background-color .3s ease;
+    width: 2px;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  color: #212429;
+  margin: 0;
+}
+
+.modal-body {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.modal-info {
+  flex: 1;
+  padding: 5px;
+}
+
+.modal-price {
+  font-weight: bold;
+  color: #212429;
+  margin: 10px 0;
+}
+
+.modal-description {
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-order {
+  background-color: #FFD700;
+  color: #212429;
+}
+
+.button-close {
+  background-color: #212429;
+  color: white;
+}
+/* Иконка возврата на главную */
+.fixed-home-icon {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #212429;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px #ffc00054;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.fixed-home-icon:hover {
+    transform: scale(1.1);
+    background-color: #FFD700;
+}
+
+.fixed-home-icon:hover img {
+    filter: brightness(0);
+}
+
+.fixed-home-icon img {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+/* Медиа-запросы для дополнительной адаптации */
+@media (max-width: 768px) {
+  .zagolovok {
+    font-size: 1.3em;
+  }
+  
+  .item-name {
+    font-size: 18px;
+  }
+  
+  .item-ingredients {
+    font-size: 0.8em;
+  }
+  
+  .item-price, .add-button {
+    font-size: 18px;
+  }
+  /* Основные стили для мобильных */
+body {
+  padding: 10px;
+}
+
+/* Контейнер списка - адаптивный */
+.scroll-list__wrp {
+  width: 100%;
+  max-width: 500px; /* Максимальная ширина на больших экранах */
+  height: 100vh; /* Занимаем 80% высоты экрана */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Адаптация элементов списка */
+.scroll-list__item {
+  padding: 8px;
+  margin-bottom: 8px;
+  flex-direction: column;
+}
+
+#indent{
+  margin-bottom: 100px;
+}
+
+.item-content {
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.item-text {
+  flex-grow: 1;
+  width: auto;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+}
+
+.item-price-block {
+  width: 100%;
+  margin-top: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-price {
+  margin-bottom: 0;
+}
+
+.add-button {
+  width: auto;
+  padding: 0 15px;
+}
+
+/* Модальное окно для мобильных */
+.modal-content {
+  width: 90%;
+  max-width: 600px;
+  padding: 15px;
+}
+
+.modal-body {
+  flex-direction: column;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  margin-bottom: 15px;
+}
+
+}
+/* Добавим в оба CSS файла */
+/* Корзина в шапке */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FFD700;
+    color: #212429;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Модальное окно пиццы */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.add-to-cart-btn {
+    background: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Боковая корзина */
