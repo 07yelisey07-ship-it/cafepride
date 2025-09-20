@@ -80,10 +80,7 @@ document.getElementById('pizzaCard').addEventListener('click', function() {
         },);
     });
     
-    // Скрываем лоадер при загрузке страницы (на случай возврата)
-    window.addEventListener('load', function() {
-        document.getElementById('loader').style.display = 'none';
-    });
+   
 
 
 //-----------------------------салат--------------------------------------------
@@ -685,4 +682,5 @@ document.getElementById('orderPhone')?.addEventListener('keydown', function(e) {
     if (this.selectionStart < 5 && e.keyCode !== 8 && e.keyCode !== 46 && !e.ctrlKey) {
         e.preventDefault();
     }
+
 });
